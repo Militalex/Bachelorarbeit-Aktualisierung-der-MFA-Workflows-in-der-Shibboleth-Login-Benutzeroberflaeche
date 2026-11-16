@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta name="viewport" content="initial-scale=1.0" charset="utf-8">
+    	<title>Shibboleth Identity Provider der Universität Bonn</title>
+    <link rel="stylesheet" type="text/css" href="startpage_files/main.css">
+    <link rel="stylesheet" type="text/css" href="main_files/main.css">
+
+</head>
+  	<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/otpauth/dist/otpauth.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <div class="wrapper">
+      <div class="container">
+        <header>
+          <img src="startpage_files/logo.png" alt="Universität Bonn">
+	 </header>
+
+	<div style="color: #014A7B; background-color: #969696; padding: 2px 0px 2px 0px; margin-top: 0px;">
+	</div>
+
+	 <div class="content">
+          <div class="column one">
+            <form action="./select_token.html" id="main_login_form" method="GET">
+
+
+
+                <legend>
+Anmelden bei Confluence
+                </legend>
+
+              <div class="form-element-wrapper">
+                <label for="username">Uni-ID</label>
+                <input class="form-element form-field" id="username" name="j_username" type="text">
+              </div>
+
+              <div class="form-element-wrapper">
+                <label for="password">Passwort</label>
+                <input class="form-element form-field" id="password" name="j_password" type="password" value="">
+              </div>
+
+              <div class="form-element-wrapper">
+                <input type="checkbox" name="donotcache" value="1"> Anmeldung nicht speichern
+              </div>
+
+              <div class="form-element-wrapper">
+                <input id="_shib_idp_revokeConsent" type="checkbox" name="_shib_idp_revokeConsent" value="true">
+Lösche die frühere Einwilligung zur Weitergabe Ihrer Informationen an diesen Dienst.              </div>
+
+              <div class="form-element-wrapper">
+                <button class="form-element form-button" id="login_button" type="submit" name="_eventId_proceed">Anmeldung</button>
+              </div>
+            </form>
+
+
+              SP für Confluence
+
+
+
+          </div>
+          <div class="column two">
+            <ul class="list list-help">
+              <li class="list-help-item"><a href="https://www.hrz.uni-bonn.de/de/services/uni-id-identity-management/uni-id-identity-management" target="_blank"><span class="item-marker">›</span> Passwort vergessen?</a></li>
+                         </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container container-footer">
+          <p class="footer-text">Support: Technik - info-hrz@uni-bonn.de, Lizenzen: ebib@ulb.uni-bonn.de</p>
+        </div>
+      </footer>
+    </div>
+
+    <div id="overlay">
+        <div id="overlayContent">
+            <h2 style="font-weight: lighter;">Study Dashboard - <a id="startpage-link" href="./startpage.html">Home</a></h2>
+            <p style="color: #EE2375" id="overlayError">&nbsp;</p>
+            <div id="contentWrapper">
+                <div id="qrCode"></div>
+                <div id="statistics">
+                    <h3>Statistics</h3>
+                    <p id="statisticsContent">Dummy text for statistics this is a super cool text to demonstrate the functionality</p>
+                </div>
+            </div>
+            <div id="buttonWrapper">
+                <button class="overlayButton" id="registerToken">FIDO2 Register</button>
+                <button class="overlayButton" id="validateToken">FIDO2 Test</button>
+                <button class="overlayButton" id="generateQRCode">Generate QR Code</button>
+                <button class="overlayButton" id="resetEnvironment">Reset Environment</button>
+                <button class="overlayButton" id="startEnvironment">Init Environment</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main_files/main.js"></script>
+
+
+</body>
+</html>

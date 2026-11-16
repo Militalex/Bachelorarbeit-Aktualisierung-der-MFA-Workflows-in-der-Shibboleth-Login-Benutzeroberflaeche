@@ -1,0 +1,49 @@
+Current Qualtrics Params:
+TID = 931
+Lang = DE
+OWN First
+----
+
+DE Study Start:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=363-1559&p=f&t=gguYoEpdeTO0veBd-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=363%3A1559
+
+DE Allg. Fragebogen:
+https://usecap.fra1.qualtrics.com/jfe/form/SV_82FsRrR74emzfpA?Q_Language=de
+
+DE HRZ Design:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=363-1961&p=f&t=ws5pQUOpJ3dBFMv4-1&scaling=scale-down-width&content-scaling=fixed&page-id=41%3A38&starting-point-node-id=363%3A1961
+
+DE Erste Usability Abfrage:
+https://usecap.fra1.qualtrics.com/jfe/form/SV_2gguZfir6mK4vsO?Q_Language=de
+
+DE Own Design:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=363-1922&p=f&t=33RtcePl5cZ2KYhk-1&scaling=scale-down-width&content-scaling=fixed&page-id=79%3A3868&starting-point-node-id=363%3A1922
+
+DE Zweite Usability Abfrage:
+https://usecap.fra1.qualtrics.com/jfe/form/SV_1ADsusYsPVsplHw?Q_Language=de
+
+DE Study End:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=409-1751&p=f&t=od4CUuy6fhqN3yhT-1&scaling=scale-down-width&content-scaling=fixed&page-id=409%3A1750&starting-point-node-id=409%3A1751
+
+----
+
+EN Study Start:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=498-1298&p=f&t=KTRI5QUiP1dl1YeH-1&scaling=scale-down-width&content-scaling=fixed&page-id=498%3A1297&starting-point-node-id=498%3A1298
+
+EN Allg. Fragebogen:
+https://usecap.fra1.qualtrics.com/jfe/form/SV_82FsRrR74emzfpA?Q_Language=en
+
+EN HRZ Design:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=498-3246&p=f&t=VnvMvmye6JtBRW9E-1&scaling=scale-down-width&content-scaling=fixed&page-id=498%3A3155&starting-point-node-id=498%3A3246
+
+EN Erste Usability Abfrage:
+https://usecap.fra1.qualtrics.com/jfe/form/SV_2gguZfir6mK4vsO?Q_Language=en
+
+EN OWN Design:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=523-4182&p=f&t=kdaa1XTQMMoYMhUw-1&scaling=scale-down-width&content-scaling=fixed&page-id=523%3A3871&starting-point-node-id=523%3A4182
+
+EN Zweite Usability Abfrage:
+https://usecap.fra1.qualtrics.com/jfe/form/SV_1ADsusYsPVsplHw?Q_Language=en
+
+EN Study End:
+https://www.figma.com/proto/Xvt3BPW7ZULpiaLb5oKLJR/Prototype?node-id=523-3840&t=OaGNc8ymy7JRbykl-1&scaling=scale-down-width&content-scaling=fixed&page-id=523%3A3839&starting-point-node-id=523%3A3840

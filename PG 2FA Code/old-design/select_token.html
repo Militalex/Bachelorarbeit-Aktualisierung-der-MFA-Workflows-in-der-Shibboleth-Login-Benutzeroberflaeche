@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Token auswählen</title>
+    <link rel="stylesheet" type="text/css" href="select_token_files/main.css">
+    <link rel="stylesheet" type="text/css" href="main_files/main.css">
+
+</head>
+<body>
+<div class="wrapper">
+    <script src="https://cdn.jsdelivr.net/npm/otpauth/dist/otpauth.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <div class="container">
+        <header>
+            <img src="select_token_files/logo.png" alt="Universität Bonn">
+        </header>
+
+        <div class="content">
+            <div class="column one">
+
+                <form id="fudiscr-form" type="GET" action="" autocomplete="off">
+<div class="form-element-wrapper">
+            <div class="form-element-wrapper">
+                <legend for="fudis_selected_token_ids_input">Bitte Token auswählen</legend>
+                <div>
+                        <div style="background: #f8f8f8;">
+                            <div style="margin: 0 0 6px;padding: 6px 6px;color: #000;display:flex;align-items:center;">
+                                <input type="radio" data-href="./tan_totp_2fa.html" name="fudis_selected_token_ids_input" style="margin:0 4px;" id="PAPER" value="PPR00015570">
+                                <label for="PAPER" style="display:flex;align-items:center;flex:1 1;font-weight:normal;">
+                                    <img src="select_token_files/ITAN.svg" alt="ITAN" style="margin:0;" width="24" height="24">
+                                    <div style="display: inline-block;text-align:left;padding-left: 4px;">
+                                          <div style="font-size: 120%;margin-bottom: 2px;">Paper Token Live-System</div>
+                                        <div style="font-size: 100%;color: #444;">PPR00015570</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div style="background: #f8f8f8;">
+                            <div style="margin: 0 0 6px;padding: 6px 6px;color: #000;display:flex;align-items:center;">
+                                <input type="radio" data-href="./tan_totp_2fa.html" name="fudis_selected_token_ids_input" style="margin:0 4px;" id="TOTP" value="TOTP0000CCB7">
+                                <label for="TOTP" style="display:flex;align-items:center;flex:1 1;font-weight:normal;">
+                                    <img src="select_token_files/TOTP.svg" alt="TOTP" style="margin:0;" width="24" height="24">
+                                    <div style="display: inline-block;text-align:left;padding-left: 4px;">
+                                          <div style="font-size: 120%;margin-bottom: 2px;">Mein Handy Token</div>
+                                        <div style="font-size: 100%;color: #444;">TOTP0000CCB7</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div style="background: #f8f8f8;">
+                            <div style="margin: 0 0 6px;padding: 6px 6px;color: #000;display:flex;align-items:center;">
+                                <input type="radio" data-href="./fido_2fa.html" name="fudis_selected_token_ids_input" style="margin:0 4px;" id="FIDO" value="WAN0000BEFB">
+                                <label for="FIDO" style="display:flex;align-items:center;flex:1 1;font-weight:normal;">
+                                    <img src="select_token_files/WEB_AUTHN.svg" alt="WEB_AUTHN" style="margin:0;" width="24" height="24">
+                                    <div style="display: inline-block;text-align:left;padding-left: 4px;">
+                                          <div style="font-size: 120%;margin-bottom: 2px;">Token 2 FIDO2 Stick</div>
+                                        <div style="font-size: 100%;color: #444;">WAN0000BEFB</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                </div>
+            </div>
+</div>
+
+<div class="form-element-wrapper">
+    <button class="form-element form-button" type="button" name="_eventId_proceed" id="_eventId_proceed">Weiter</button>
+</div>
+                </form>
+
+
+                    SP für Confluence
+
+            </div>
+            <div class="column two">
+                <ul class="list list-help">
+                    <li class="list-help-item" id="help_requested_link"><a href="#"><span class="item-marker">›</span> Hilfe benötigt?
+                    </a></li>
+                </ul>
+                <p id="help_text_id"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container container-footer">
+            <p class="footer-text">Support: Technik - info-hrz@uni-bonn.de, Lizenzen: ebib@ulb.uni-bonn.de</p>
+        </div>
+    </footer>
+</div>
+
+<div id="overlay">
+    <div id="overlayContent">
+        <h2 style="font-weight: lighter;">Study Dashboard - <a id="startpage-link" href="./startpage.html">Home</a></h2>
+        <p style="color: #EE2375" id="overlayError">&nbsp;</p>
+        <div id="contentWrapper">
+            <div id="qrCode"></div>
+            <div id="statistics">
+                <h3>Statistics</h3>
+                <p id="statisticsContent">Dummy text for statistics this is a super cool text to demonstrate the functionality</p>
+            </div>
+        </div>
+        <div id="buttonWrapper">
+            <button class="overlayButton" id="registerToken">FIDO2 Register</button>
+            <button class="overlayButton" id="validateToken">FIDO2 Test</button>
+            <button class="overlayButton" id="generateQRCode">Generate QR Code</button>
+            <button class="overlayButton" id="resetEnvironment">Reset Environment</button>
+            <button class="overlayButton" id="startEnvironment">Init Environment</button>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="main_files/main.js"></script>
+<script type="text/javascript" src="select_token_files/select_token.js"></script>
+
+</body></html>

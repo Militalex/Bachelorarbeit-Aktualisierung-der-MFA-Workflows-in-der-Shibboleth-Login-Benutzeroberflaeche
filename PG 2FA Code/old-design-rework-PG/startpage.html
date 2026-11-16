@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0" charset="utf-8">
+    <title>Shibboleth Identity Provider der Universität Bonn</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="startpage_files/main.css">
+    <link rel="stylesheet" type="text/css" href="main_files/main.css">
+
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/otpauth/dist/otpauth.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <img src="startpage_files/logo.png" alt="Universität Bonn">
+        </header>
+
+        <div style="color: #014A7B; background-color: #969696; padding: 2px 0px 2px 0px; margin-top: 0px;">
+        </div>
+
+        <div class="content">
+            <div class="column one">
+                <form action="./select_token.html" id="main_login_form" method="GET" class="needs-validation"
+                      novalidate>
+                    <h5 class="h5" style="white-space: nowrap;">Anmelden bei Confluence</h5>
+
+                    <div class="form-element-wrapper">
+                        <label for="username">Uni-ID</label>
+                        <input class="form-control form-field form-element" id="username" name="j_username" type="text"
+                               autofocus required>
+                        <div class="invalid-feedback">Bitte geben Sie ihre Uni-ID an.</div>
+                    </div>
+
+                    <div class="form-element-wrapper">
+                        <label for="password">Passwort</label>
+                        <input class="form-control form-field form-element" id="password" name="j_password"
+                               type="password"
+                               value="" required>
+                        <div class="invalid-feedback">Bitte geben Sie ihr Passwort an.</div>
+                    </div>
+
+                    <div class="form-element-wrapper">
+                        <label style="cursor: pointer; font-weight: lighter">
+                            <input class="form-check-input" type="checkbox" name="donotcache"
+                                   value="1">
+                            Angemeldet
+                            bleiben
+                        </label>
+                    </div>
+
+                    <div class="form-element-wrapper">
+                        <label style="cursor: pointer; font-weight: lighter">
+                            <input class="form-check-input" id="_shib_idp_revokeConsent" type="checkbox"
+                                   name="_shib_idp_revokeConsent" value="true">
+                            Widerrufe die Einwilligung zur Datenweitergabe an diesen Dienst.
+                        </label>
+                    </div>
+
+                    <div class="form-element-wrapper">
+                        <button class="btn btn-secondary form-element" id="login_button" type="submit"
+                                name="_eventId_proceed">
+                            Anmelden
+                        </button>
+                    </div>
+                </form>
+
+
+                SP für Confluence
+
+
+            </div>
+            <div class="column two">
+                <a href="https://www.hrz.uni-bonn.de/de/services/uni-id-identity-management/passwortwiederherstellung">
+                    <button class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top"
+                            title="Passwort zurücksetzen">Passwort vergessen?
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white">
+        <div class="container py-3">
+            <p class="mb-0">Support: Technik - info-hrz@uni-bonn.de, Lizenzen: ebib@ulb.uni-bonn.de</p>
+        </div>
+        <div class="filler_bottom"></div>
+    </footer>
+</div>
+
+<div id="overlay">
+    <div id="overlayContent">
+        <h2 style="font-weight: lighter;">Study Dashboard - <a id="startpage-link" href="./startpage.html">Home</a></h2>
+        <p style="color: #EE2375" id="overlayError">&nbsp;</p>
+        <div id="contentWrapper">
+            <div id="qrCode"></div>
+            <div id="statistics">
+                <h3>Statistics</h3>
+                <p id="statisticsContent">Dummy text for statistics this is a super cool text to demonstrate the
+                    functionality</p>
+            </div>
+        </div>
+        <div id="buttonWrapper">
+            <button class="overlayButton" id="registerToken">FIDO2 Register</button>
+            <button class="overlayButton" id="validateToken">FIDO2 Test</button>
+            <button class="overlayButton" id="generateQRCode">Generate QR Code</button>
+            <button class="overlayButton" id="resetEnvironment">Reset Environment</button>
+            <button class="overlayButton" id="startEnvironment">Init Environment</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="main_files/main.js"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation');
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    console.log("form valid: " + form.checkValidity());
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    } else {
+                        localStorage.setItem("start_time", new Date().getTime() + '');
+                        console.log("start time: " + localStorage.getItem("start_time"));
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            });
+    })()
+</script>
+
+
+</body>
+</html>

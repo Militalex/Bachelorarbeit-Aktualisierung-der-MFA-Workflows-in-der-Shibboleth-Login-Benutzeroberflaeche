@@ -1,0 +1,51 @@
+# Vertrauliche Rohdaten der Studie
+13 Gesammelte Studiendaten/01 Einverständniserklärungen/
+13 Gesammelte Studiendaten/02 Recordings/
+13 Gesammelte Studiendaten/03 Transkripte/
+13 Gesammelte Studiendaten/04 Erhobene Daten/
+12 Studienvorbereitung/02 For the Study/Teilnehmer IDs.pptx
+12 Studienvorbereitung/02 For the Study/Teilnehmer IDs.pdf
+
+# Vertrauliche Interviewdaten und qualitative Codierungen
+02 Experteninterview/Experteninterview.mp3
+02 Experteninterview/Experteninterview.txt
+02 Experteninterview/*.qda/
+04 Literaturreche/*/*.pdf
+04 Literaturreche/*.pdf
+04 Literaturreche/*/*.zip
+12 Studienvorbereitung/01 Rekrutierung/Mail Adressen.txt
+15 Studienanalyse/01 Coding/*.qda/
+19 Notepad
+
+# Lokale Analyse- und Sitzungsdateien
+.Rhistory
+.RData
+.Rproj.user/
+**/.Rhistory
+**/.RData
+**/.Rproj.user/
+**/.idea/
+**/.vscode/
+
+# Lokale Geheimnisse und Zugangsdaten
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+secrets.*
+*.secret
+**/credentials/
+**/secrets/
+
+# Betriebssystem- und temporäre Dateien
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.temp
+*.bak
+~$*

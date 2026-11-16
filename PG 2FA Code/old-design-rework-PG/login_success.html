@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0" charset="utf-8">
+    <title>Shibboleth Identity Provider der Universität Bonn</title>
+    <link rel="stylesheet" type="text/css" href="startpage_files/main.css">
+    <link rel="stylesheet" type="text/css" href="main_files/main.css">
+
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/otpauth/dist/otpauth.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <img src="startpage_files/logo.png" alt="Universität Bonn">
+        </header>
+
+        <div style="color: #014A7B; background-color: #969696; padding: 2px 0px 2px 0px; margin-top: 0px;">
+        </div>
+
+        <div class="content">
+            <div class="column one">
+
+
+                SP für Confluence
+
+                <div style="width: 100%; background-color: #6bdb8d; height: 100%; opacity: 100%;">
+                    <h1 style="color: white; text-align: center; padding-top: 50px;">Login erfolgreich</h1>
+                    <p style="color: white; text-align: center; padding-top: 50px;">Sie können jetzt tolle Sachen machen!</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container container-footer">
+            <p class="footer-text">Support: Technik - info-hrz@uni-bonn.de, Lizenzen: ebib@ulb.uni-bonn.de</p>
+        </div>
+    </footer>
+</div>
+
+<div id="overlay">
+    <div id="overlayContent">
+        <h2 style="font-weight: lighter;">Study Dashboard - <a id="startpage-link" href="./startpage.html">Home</a></h2>
+        <p style="color: #EE2375" id="overlayError">&nbsp;</p>
+        <div id="contentWrapper">
+            <div id="qrCode"></div>
+            <div id="statistics">
+                <h3>Statistics</h3>
+                <p id="statisticsContent">Dummy text for statistics this is a super cool text to demonstrate the functionality</p>
+            </div>
+        </div>
+        <div id="buttonWrapper">
+            <button class="overlayButton" id="registerToken">FIDO2 Register</button>
+            <button class="overlayButton" id="validateToken">FIDO2 Test</button>
+            <button class="overlayButton" id="generateQRCode">Generate QR Code</button>
+            <button class="overlayButton" id="resetEnvironment">Reset Environment</button>
+            <button class="overlayButton" id="startEnvironment">Init Environment</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="login_success_files/login_success.js"></script>
+<script type="text/javascript" src="main_files/main.js"></script>
+
+</body></html>

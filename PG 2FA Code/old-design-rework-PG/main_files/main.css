@@ -1,0 +1,167 @@
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+#overlayContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: "Calibri Light", Arial, sans-serif;
+}
+
+.overlayButton {
+    padding: 0 10px;
+    border: none;
+    background-color: #B61601;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.overlayButton:hover {
+    background-color: #D41601;
+}
+
+#qrCode {
+    width: 128px;
+    height: 128px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+#statistics {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 168px);
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+#buttonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#buttonWrapper button {
+    flex: 1;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 5px;
+    font-size: 10px;
+}
+
+
+#contentWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.statisticsName {
+    font-weight: lighter;
+}
+
+#startpage-link {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: #333; /* Choose your desired color */
+}
+
+/* Styles the link when it's hovered */
+#startpage-link:hover {
+    color: #666; /* Choose your desired color */
+}
+
+/* Styles the link when it's focused */
+#startpage-link:focus {
+    outline: none; /* Removes the default focus outline */
+}
+
+/* Adds the fading underline animation */
+#startpage-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #666; /* Choose your desired color */
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Animates the underline width on hover */
+#startpage-link:hover::after {
+    width: 100%;
+}
+
+
+footer {
+    color: #ffffff;
+    font-size: 11px;
+    background: #717171;
+    margin-top: 10%;
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+}
+
+.footer-text {
+    margin-bottom: 12px;
+}
+
+.footer-links a:link,
+.footer-links a:visited {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.footer-links a:after {
+    content: "\00a0\00a0\00a0|\00a0\00a0";
+}
+
+.footer-links a.last:after {
+    content: "";
+}
+
+.filler_bottom {
+    /* Footer styles */
+    background-color: #717171;
+    color: #333;
+    position: fixed;
+    bottom: 0;
+    top: 90%;
+    left: 0;
+    width: 100%;
+}

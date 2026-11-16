@@ -1,0 +1,76 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    padding: 5px;
+    position: relative;
+    background-color: #004F9F;
+    color: white;
+}
+.headline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-size: large;
+    font-family: Exo;
+    text-align: center;
+    background-color: antiquewhite;
+}
+p {
+    font-size: larger;
+}
+.content {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 15% 10% 15%;
+}
+.sep {
+    border: none;
+    height: 1.1px;
+    width: 80%;
+    background-color: black;
+}
+.actionarea {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: auto;
+    margin-left: 0;
+    width: 100%
+}
+/* Grundstil für den Button */
+button {
+    background: #004F9F; /* Farbverlauf */
+    color: white; /* Schriftfarbe */
+    border: none; /* Kein Rahmen */
+    border-radius: 10px; /* Runde Ecken */
+    padding: 10px 20px; /* Innenabstand */
+    font-size: 16px; /* Schriftgröße */
+    font-weight: bold; /* Fettere Schrift */
+    letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
+    cursor: pointer; /* Zeigerhand beim Hovern */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    transition: all 0.2s ease; /* Sanfter Übergang bei Hover */
+}
+
+/* Hover-Effekt */
+button:hover {
+    background: #0080ff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stärkerer Schatten */
+
+}
+
+/* Klick-Effekt */
+button:active {
+    background: #004F9F;
+}
