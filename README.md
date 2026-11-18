@@ -26,24 +26,24 @@ Auswertungen:
 
 > **Hinweis:** Die unten mit "[Abschnitt noch in Arbeit]" markierten Abschnitte werden noch (Änderungen vorbehalten) in dieser README ergänzt.
 
-1. **Themenfindung und Vorbereitung**
+1. **Themenfindung und Vorbereitung**<br>
    1.1. [Themenfindung](#11-themenfindung)<br>
    1.2. [Experteninterview](#12-experteninterview)<br>
    1.3. [Exposé](#13-expose)<br>
    1.4. [Literaturrecherche und Related Work](#14-literaturrecherche-und-related-work)
-2. **Konzeption und Prototyping**
+2. **Konzeption und Prototyping**<br>
    2.1. [Studienmethodik](#21-studienmethodik)<br>
    2.2. First Prototype *[Abschnitt noch in Arbeit]*<br>
    2.3. Studienwebseite *[Abschnitt noch in Arbeit]*<br>
    2.4. Second Prototype *[Abschnitt noch in Arbeit]*
-3. **Studienvorbereitung und Datenerhebung**
+3. **Studienvorbereitung und Datenerhebung**<br>
    3.1. Studienvorbereitung *[Abschnitt noch in Arbeit]*<br>
    3.2. Gesammelte Studiendaten *[Abschnitt noch in Arbeit]*
-4. **Auswertung und Dokumentation**
+4. **Auswertung und Dokumentation**<br>
    4.1. Studienanalyse *[Abschnitt noch in Arbeit]*<br>
    4.2. Entwurf der Bachelorarbeit *[Abschnitt noch in Arbeit]*<br>
    4.3. Fertige Bachelorarbeit *[Abschnitt noch in Arbeit]*
-5. **Präsentationen und ergänzende Materialien**
+5. **Präsentationen und ergänzende Materialien**<br>
    5.1. BA Pitch *[Abschnitt noch in Arbeit]*<br>
    5.2. Abschlusspräsentation *[Abschnitt noch in Arbeit]*
 
